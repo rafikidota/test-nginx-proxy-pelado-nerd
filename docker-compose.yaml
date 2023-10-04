@@ -38,7 +38,7 @@ services:
     environment:
       - VIRTUAL_HOST=toc.copextel.com.cu,www.toc.copextel.com.cu
       - LETSENCRYPT_HOST=toc.copextel.com.cu,www.toc.copextel.com.cu
-      - LETSENCRYPT_EMAIL=pablo@pablokbs.com
+      - LETSENCRYPT_EMAIL=toc@copextel.com.cu
     depends_on:
       - nginx-proxy
       - letsencrypt
