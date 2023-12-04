@@ -36,8 +36,8 @@ services:
     volumes:
       - ./www:/usr/share/nginx/html:ro
     environment:
-      - VIRTUAL_HOST=copextel.com.cu,www.copextel.com.cu
-      - LETSENCRYPT_HOST=copextel.com.cu,www.copextel.com.cu
+      - VIRTUAL_HOST=www.copextel.com.cu
+      - LETSENCRYPT_HOST=www.copextel.com.cu
       - LETSENCRYPT_EMAIL=davidl@tic.copextel.com.cu
     depends_on:
       - nginx-proxy
