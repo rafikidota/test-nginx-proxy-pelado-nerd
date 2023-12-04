@@ -29,16 +29,16 @@ services:
       - acme:/etc/acme.sh
 
   www:
-    image: nginx:1.23.3-alpine
+    image: nginx:1.25.3-alpine
     restart: always
     expose:
       - "80"
     volumes:
       - ./www:/usr/share/nginx/html:ro
     environment:
-      - VIRTUAL_HOST=toc.copextel.com.cu,www.toc.copextel.com.cu
-      - LETSENCRYPT_HOST=toc.copextel.com.cu,www.toc.copextel.com.cu
-      - LETSENCRYPT_EMAIL=toc@copextel.com.cu
+      - VIRTUAL_HOST=copextel.com.cu,www.copextel.com.cu
+      - LETSENCRYPT_HOST=copextel.com.cu,www.copextel.com.cu
+      - LETSENCRYPT_EMAIL=davidl@tic.copextel.com.cu
     depends_on:
       - nginx-proxy
       - letsencrypt
